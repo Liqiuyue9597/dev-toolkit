@@ -1,0 +1,116 @@
+{
+  "name": "dev-toolkit",
+  "displayName": "Dev Toolkit",
+  "description": "All-in-one developer toolkit: console.log helper, string case transform, filename copy",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#6C5CE7",
+    "theme": "dark"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "dev-toolkit.insertLog",
+        "title": "Dev Toolkit: Insert console.log"
+      },
+      {
+        "command": "dev-toolkit.deleteAllLogs",
+        "title": "Dev Toolkit: Delete All console.log"
+      },
+      {
+        "command": "dev-toolkit.toCamelCase",
+        "title": "Dev Toolkit: Convert to camelCase"
+      },
+      {
+        "command": "dev-toolkit.toPascalCase",
+        "title": "Dev Toolkit: Convert to PascalCase"
+      },
+      {
+        "command": "dev-toolkit.toSnakeCase",
+        "title": "Dev Toolkit: Convert to snake_case"
+      },
+      {
+        "command": "dev-toolkit.toKebabCase",
+        "title": "Dev Toolkit: Convert to kebab-case"
+      },
+      {
+        "command": "dev-toolkit.toUpperCase",
+        "title": "Dev Toolkit: Convert to UPPER CASE"
+      },
+      {
+        "command": "dev-toolkit.toLowerCase",
+        "title": "Dev Toolkit: Convert to lower case"
+      },
+      {
+        "command": "dev-toolkit.toConstantCase",
+        "title": "Dev Toolkit: Convert to CONSTANT_CASE"
+      },
+      {
+        "command": "dev-toolkit.transformPicker",
+        "title": "Dev Toolkit: Transform String (Pick Format)"
+      },
+      {
+        "command": "dev-toolkit.copyFileName",
+        "title": "Dev Toolkit: Copy File Name"
+      },
+      {
+        "command": "dev-toolkit.copyFileNameNoExt",
+        "title": "Dev Toolkit: Copy File Name (No Extension)"
+      },
+      {
+        "command": "dev-toolkit.copyFolderName",
+        "title": "Dev Toolkit: Copy Folder Name"
+      },
+      {
+        "command": "dev-toolkit.copyFilePath",
+        "title": "Dev Toolkit: Copy Relative File Path"
+      },
+      {
+        "command": "dev-toolkit.copyPicker",
+        "title": "Dev Toolkit: Copy File Info (Pick)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "dev-toolkit.insertLog",
+        "key": "cmd+shift+l",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "dev-toolkit.deleteAllLogs",
+        "key": "cmd+shift+d",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "dev-toolkit.transformPicker",
+        "key": "cmd+shift+t",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "dev-toolkit.copyPicker",
+        "key": "cmd+shift+f",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "node out/test/string-utils.test.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}

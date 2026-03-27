@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C5CE7"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded background -->
+  <rect width="128" height="128" rx="24" ry="24" fill="url(#bg)"/>
+  <!-- Wrench icon (left, tilted) -->
+  <g transform="translate(28, 30) rotate(-15, 20, 34)" opacity="0.95">
+    <path d="M10 12 C10 5, 18 0, 25 3 L20 10 L22 14 L28 13 L33 6 C37 12, 34 22, 26 24 L12 50 C10 54, 4 54, 2 50 C0 47, 1 42, 4 40 Z" fill="white"/>
+  </g>
+  <!-- Code bracket < /> -->
+  <g transform="translate(24, 18)">
+    <text x="40" y="88" font-family="monospace, Courier" font-size="38" font-weight="bold" fill="white" text-anchor="middle" opacity="0.95">&lt;/&gt;</text>
+  </g>
+</svg>
