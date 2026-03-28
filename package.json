@@ -3,6 +3,12 @@
   "displayName": "Dev Toolkit",
   "description": "All-in-one developer toolkit: console.log helper, string case transform, filename copy",
   "version": "0.0.1",
+  "publisher": "Liqiuyue9597",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Liqiuyue9597/dev-toolkit"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.85.0"
   },
