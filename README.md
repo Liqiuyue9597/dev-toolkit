@@ -2,36 +2,59 @@
 
 All-in-one VSCode 开发工具箱：console.log 快捷操作、字符串命名格式转换、文件名复制。
 
+## 环境要求
+
+- **Node.js >= 20**（推荐使用 [nvm](https://github.com/nvm-sh/nvm) 管理版本）
+- npm（随 Node.js 一起安装）
+
+```bash
+# 如果使用 nvm，切换到 Node 20+
+nvm use 20
+```
+
 ## 安装
 
 ### 方式一：从 GitHub Release 下载
 
 1. 前往 [Releases](https://github.com/Liqiuyue9597/dev-toolkit/releases) 页面下载最新的 `.vsix` 文件
-2. 在 VS Code 中：`Extensions` → `···` → `Install from VSIX...` 选择下载的文件
+2. 安装下载好的 `.vsix` 文件，二选一：
+   - **图形界面**：在 VS Code / CodeBuddy 中：`Extensions` → `···` → `Install from VSIX...` → 选择下载的文件
+   - **命令行**：在 `.vsix` 文件所在目录执行：
+     ```bash
+     # VS Code
+     code --install-extension dev-toolkit-0.0.1.vsix
 
-或使用命令行：
+     # CodeBuddy CN
+     buddycn --install-extension dev-toolkit-0.0.1.vsix
+     ```
+
+### 方式二：从源码构建并安装
 
 ```bash
-code --install-extension dev-toolkit-0.0.1.vsix
-```
-
-### 方式二：从源码构建
-
-```bash
+# 1. 克隆仓库并安装依赖
 git clone https://github.com/Liqiuyue9597/dev-toolkit.git
 cd dev-toolkit
 npm install
+
+# 2. 编译 TypeScript
 npm run compile
+
+# 3. 打包为 .vsix 文件（会在项目根目录生成 dev-toolkit-x.x.x.vsix）
+npx @vscode/vsce package
+
+# 4. 安装到编辑器
+code --install-extension dev-toolkit-0.0.1.vsix
+# 或 CodeBuddy CN：
+# buddycn --install-extension dev-toolkit-0.0.1.vsix
 ```
 
-在 VS Code 中按 `F5` 启动 Extension Development Host 进行测试。
+> ⚠️ 注意：步骤 2-3 不能跳过，必须先编译再打包，直接安装不存在的 `.vsix` 文件会报 ENOENT 错误。
+>
+> 💡 安装是全局生效的，只需装一次，之后在任何目录打开编辑器都能使用，无需重新安装。
 
-如需打包为 `.vsix` 安装包：
+#### 调试模式（开发者）
 
-```bash
-npm install -g @vscode/vsce
-vsce package
-```
+如果你想修改源码并实时调试，无需打包，直接在 VS Code / CodeBuddy 中按 `F5` 启动 Extension Development Host 即可。
 
 ## 功能与快捷键
 
