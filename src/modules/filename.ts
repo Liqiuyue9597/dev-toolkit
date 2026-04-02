@@ -9,7 +9,7 @@ function getActiveFilePath(): string | undefined {
 
 async function copyAndNotify(text: string, label: string): Promise<void> {
   await vscode.env.clipboard.writeText(text);
-  vscode.window.showInformationMessage(`Copied ${label}: ${text}`);
+  vscode.window.setStatusBarMessage(`✓ Copied ${label}: ${text}`, 2000);
 }
 
 // ─── Copy operations ─────────────────────────────────────────────────
