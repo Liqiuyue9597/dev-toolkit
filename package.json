@@ -2,7 +2,7 @@
   "name": "dev-toolkit",
   "displayName": "Dev Toolkit",
   "description": "All-in-one developer toolkit: console.log helper, string case transform, filename copy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "Liqiuyue9597",
   "repository": {
     "type": "git",
